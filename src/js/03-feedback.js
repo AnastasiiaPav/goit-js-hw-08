@@ -6,7 +6,7 @@ import throttle from "lodash.throttle";
    const email =  document.querySelector('input');
    const textarea = document.querySelector('textarea');
 //    const buttonSub = document.querySelector('button');
-
+// console.dir(form)
 
 form.addEventListener('submit', onFormSubmit);
 form.addEventListener('input', throttle( onTextareaInput, 500));
@@ -33,19 +33,19 @@ function populateTextarea() {
     if(savedMessage){
       const parseMessage = JSON.parse(savedMessage);
 
-      email.value = parseMessage.email ;
+      email.value = parseMessage.email || '';
       currentInput.email =  parseMessage.email ;
 
-      textarea.value = parseMessage.message;
+      textarea.value = parseMessage.message || '';
       currentInput.message = parseMessage.message;
-      
+
       console.log(typeof parseMessage);
     }
     // console.log(savedMessage);
     // console.log(typeof savedMessage);
     // console.dir(form);
     
-}
+};
 
 populateTextarea()
 
