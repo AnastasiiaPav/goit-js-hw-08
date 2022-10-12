@@ -33,10 +33,10 @@ function populateTextarea() {
     if(savedMessage){
       const parseMessage = JSON.parse(savedMessage);
 
-      email.value = parseMessage.email || '';
+      email.value = parseMessage.email ;
       currentInput.email =  parseMessage.email ;
 
-      textarea.value = parseMessage.message || '';
+      textarea.value = parseMessage.message ;
       currentInput.message = parseMessage.message;
 
       console.log(typeof parseMessage);
