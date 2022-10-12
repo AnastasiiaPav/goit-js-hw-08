@@ -33,8 +33,12 @@ function populateTextarea() {
     if(savedMessage){
       const parseMessage = JSON.parse(savedMessage);
 
-      email.value = parseMessage.email || '';
-      textarea.value = parseMessage.message || '';
+      email.value = parseMessage.email ;
+      currentInput.email =  parseMessage.email ;
+
+      textarea.value = parseMessage.message;
+      currentInput.message = parseMessage.message;
+      
       console.log(typeof parseMessage);
     }
     // console.log(savedMessage);
