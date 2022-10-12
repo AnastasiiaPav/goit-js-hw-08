@@ -31,11 +31,11 @@ function populateTextarea() {
     const savedMessage = localStorage.getItem('feedback-message');
 
     if(savedMessage){
-      const proverka = JSON.parse(savedMessage);
+      const parseMessage = JSON.parse(savedMessage);
 
-      email.value = proverka.email;
-      textarea.value = proverka.message;
-      console.log(typeof proverka);
+      email.value = parseMessage.email;
+      textarea.value = parseMessage.message;
+      console.log(typeof parseMessage);
     }
     // console.log(savedMessage);
     // console.log(typeof savedMessage);
